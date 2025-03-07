@@ -16,6 +16,7 @@
 
 package com.codelab.basiclayouts
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -262,11 +263,12 @@ private fun SootheBottomNavigation(modifier: Modifier = Modifier) {
 }
 
 // Step: MySoothe App - Scaffold
+@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
 fun MySootheAppPortrait() {
     Scaffold (
         bottomBar = { SootheBottomNavigation() }
-    ){padding->
+    ){
         HomeScreen()
     }
 }
